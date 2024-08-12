@@ -1,0 +1,41 @@
+name: Merge configs
+
+on:
+  push:
+    branches:
+      - "main"
+      - "master"
+    paths:
+      - "configs/**.json"
+
+permissions:
+  contents: write
+
+jobs:
+  merge_configs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile --ignore-scripts
+        shell: bash
+
+      - name: Merge configs
+        run: yarn merge-configs
+        shell: bash
+
+      - name: Commit and push
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "chore: merge configs"
+          git push
