@@ -1,0 +1,32 @@
+name: Validate configs
+
+on:
+  pull_request:
+    paths:
+      - "configs/**"
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  validate_configs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile --ignore-scripts
+        shell: bash
+
+      - name: Validate configs
+        id: validation_result
+        run: yarn validate-configs
+        shell: bash
