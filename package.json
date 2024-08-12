@@ -1,0 +1,20 @@
+{
+  "name": "exclusive-relayer-configs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "validate-configs": "tsx ./src/parse-configs.ts",
+    "merge-configs": "tsx ./src/parse-configs.ts --merge",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.1.0",
+    "tsx": "^4.17.0",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "viem": "^2.19.2",
+    "zod": "^3.23.8"
+  }
+}
