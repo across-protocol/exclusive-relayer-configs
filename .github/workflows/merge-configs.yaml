@@ -45,20 +45,8 @@ jobs:
           ADDED_FILES=$(git diff --name-only --diff-filter=A HEAD~1 | grep '^configs/' | xargs -n 1 basename -s .json || echo "")
           REMOVED_FILES=$(git diff --name-only --diff-filter=D HEAD~1 | grep '^configs/' | xargs -n 1 basename -s .json || echo "")
 
-          if [ -n "$ADDED_FILES" ]; then
-            ADDED_FILE_LIST=$(echo "$ADDED_FILES" | sed 's/^/- **Added:** `\/configs\//;s/$/.json`/' | tr '\n' '\n')
-          else
-            ADDED_FILE_LIST=""
-          fi
-
-          if [ -n "$REMOVED_FILES" ]; then
-            REMOVED_FILE_LIST=$(echo "$REMOVED_FILES" | sed 's/^/- **Removed:** `\/configs\//;s/$/.json`/' | tr '\n' '\n')
-          else
-            REMOVED_FILE_LIST=""
-          fi
-
-          echo "ADDED_FILE_LIST=$ADDED_FILE_LIST" >> $GITHUB_ENV
-          echo "REMOVED_FILE_LIST=$REMOVED_FILE_LIST" >> $GITHUB_ENV
+          echo "ADDED_FILES=$ADDED_FILES" >> $GITHUB_ENV
+          echo "REMOVED_FILES=$REMOVED_FILES" >> $GITHUB_ENV
 
       - name: Push changes and create pull request
         env:
@@ -73,7 +61,10 @@ jobs:
 
           This pull request was automatically created as part of our CI process to update the configuration files in the \`/configs\` directory.
 
-          #### 📄 New Configuration Files
-          $ADDED_FILE_LIST
-          $REMOVED_FILE_LIST
+          ### 📄 New Configuration Files
+          Relayers added:
+          $ADDED_FILES
+
+          Relayers added:
+          $REMOVED_FILES
           "
