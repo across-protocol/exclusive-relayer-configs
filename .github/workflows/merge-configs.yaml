@@ -39,20 +39,9 @@ jobs:
           git add build/
           git commit -m "Auto-generated build file after merging to master"
 
-      - name: Get modified config file names
-        id: get_filenames
-        run: |
-          ADDED_FILES=$(git diff --name-only --diff-filter=A HEAD~1 | grep '^configs/' | xargs -n 1 basename -s .json || echo "")
-          REMOVED_FILES=$(git diff --name-only --diff-filter=D HEAD~1 | grep '^configs/' | xargs -n 1 basename -s .json || echo "")
-
-          echo "ADDED_FILES=$ADDED_FILES" >> $GITHUB_ENV
-          echo "REMOVED_FILES=$REMOVED_FILES" >> $GITHUB_ENV
-
       - name: Push changes and create pull request
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ADDED_FILES: ${{ env.ADDED_FILES }}
-          REMOVED_FILES: ${{ env.REMOVED_FILES }}
         run: |
           BRANCH_NAME="auto-build-$(date +%s)"
           git checkout -b "$BRANCH_NAME"
@@ -62,11 +51,4 @@ jobs:
           ## 🤖 Updated relayer config 🤖
 
           This pull request was automatically created as part of our CI process to update the configuration files in the \`/configs\` directory.
-
-          ### 📄 New Configuration Files
-          Relayers added:
-          ${ADDED_FILES}
-
-          Relayers removed:
-          ${REMOVED_FILES}
           "
