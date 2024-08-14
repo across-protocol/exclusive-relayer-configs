@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  merge-configs:
+  merge_configs:
     runs-on: ubuntu-latest
 
     steps:
@@ -45,4 +45,4 @@ jobs:
           git checkout -b "$BRANCH_NAME"
           git push origin "$BRANCH_NAME"
 
-          gh pr create --base master --head "$BRANCH_NAME" --title "Auto-generated build file" --body "This PR was created automatically to include the updated build file."
+          gh pr create --base master --head "$BRANCH_NAME" --title "Auto-generated build file" --body "## Updated realyer config\n\nThis PR was created automatically to include the updated build file."
