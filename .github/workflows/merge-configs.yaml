@@ -39,6 +39,13 @@ jobs:
           git add build/
           git commit -m "Auto-generated build file after merging to master"
 
+      - name: Get modified config file names
+        id: get_filenames
+        run: |
+          FILES=$(git diff --name-only HEAD~1 | grep '^configs/' | sed 's/configs\///' | sed 's/\.json//')
+          FILE_LIST=$(echo "$FILES" | sed 's/^/- **File:** `\/configs\//;s/$/.json`/' | tr '\n' '\n')
+          echo "FILE_LIST=$FILE_LIST" >> $GITHUB_ENV
+
       - name: Push changes and create pull request
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -47,4 +54,11 @@ jobs:
           git checkout -b "$BRANCH_NAME"
           git push origin "$BRANCH_NAME"
 
-          gh pr create --base master --head "$BRANCH_NAME" --title "Auto-generated build file" --body "## 🤖 Updated relayer config 🤖"
+          gh pr create --base master --head "$BRANCH_NAME" --title "Auto-generated build file" --body "
+          ## 🤖 Updated relayer config 🤖
+
+          This pull request was automatically created as part of our CI process to update the configuration files in the \`/configs\` directory.
+
+          #### 📄 New Configuration Files
+          $FILE_LIST
+          "
