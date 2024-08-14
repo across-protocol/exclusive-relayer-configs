@@ -42,11 +42,20 @@ jobs:
       - name: Get modified config file names
         id: get_filenames
         run: |
-          ADDED_FILES=$(git diff --name-only --diff-filter=A HEAD~1 | grep '^configs/' | sed 's/configs\///' | sed 's/\.json//')
-          REMOVED_FILES=$(git diff --name-only --diff-filter=D HEAD~1 | grep '^configs/' | sed 's/configs\///' | sed 's/\.json//')
+          ADDED_FILES=$(git diff --name-only --diff-filter=A HEAD~1 | grep '^configs/' | xargs -n 1 basename -s .json || echo "")
+          REMOVED_FILES=$(git diff --name-only --diff-filter=D HEAD~1 | grep '^configs/' | xargs -n 1 basename -s .json || echo "")
 
-          ADDED_FILE_LIST=$(echo "$ADDED_FILES" | sed 's/^/- **Added:** `\/configs\//;s/$/.json`/' | tr '\n' '\n')
-          REMOVED_FILE_LIST=$(echo "$REMOVED_FILES" | sed 's/^/- **Removed:** `\/configs\//;s/$/.json`/' | tr '\n' '\n')
+          if [ -n "$ADDED_FILES" ]; then
+            ADDED_FILE_LIST=$(echo "$ADDED_FILES" | sed 's/^/- **Added:** `\/configs\//;s/$/.json`/' | tr '\n' '\n')
+          else
+            ADDED_FILE_LIST=""
+          fi
+
+          if [ -n "$REMOVED_FILES" ]; then
+            REMOVED_FILE_LIST=$(echo "$REMOVED_FILES" | sed 's/^/- **Removed:** `\/configs\//;s/$/.json`/' | tr '\n' '\n')
+          else
+            REMOVED_FILE_LIST=""
+          fi
 
           echo "ADDED_FILE_LIST=$ADDED_FILE_LIST" >> $GITHUB_ENV
           echo "REMOVED_FILE_LIST=$REMOVED_FILE_LIST" >> $GITHUB_ENV
