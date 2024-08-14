@@ -65,8 +65,8 @@ jobs:
 
           ### 📄 New Configuration Files
           Relayers added:
-          $ADDED_FILES
+          ${ADDED_FILES}
 
           Relayers removed:
-          $REMOVED_FILES
+          ${REMOVED_FILES}
           "
