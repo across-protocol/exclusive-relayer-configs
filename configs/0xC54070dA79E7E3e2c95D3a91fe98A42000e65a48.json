@@ -1,0 +1,6 @@
+{
+  "minExclusivePeriod": 5,
+  "minProfitThreshold": 0.01,
+  "balanceMultiplier": 0.234,
+  "maxFillSize": 14000
+}
