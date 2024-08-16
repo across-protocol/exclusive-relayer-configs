@@ -2,14 +2,13 @@ import { z } from "zod";
 import { readdirSync, readFileSync, writeFileSync } from "fs";
 
 import { parseJsonPreprocessor, checksummedEthAddress } from "./utils.js";
-import { checksumAddress, isAddress } from "viem";
+import { checksumAddress } from "viem";
 
 const projectRoot = process.cwd();
 
 const exclusiveRelayerConfigSchema = z.preprocess(
   parseJsonPreprocessor,
   z.object({
-    address: checksummedEthAddress,
     minExclusivePeriod: z.number(), // (seconds) eg. 10
     minProfitThreshold: z.number(), // eg. 0.0001
     balanceMultiplier: z.number(), // eg. 0.2
@@ -28,10 +27,11 @@ const exclusiveRelayerConfigs = readdirSync(projectRoot + "/configs").map(
         throw new Error("Only JSON files are supported.");
       }
 
-      if (!isAddress(addressFromFileName, { strict: true })) {
-        throw new Error(
-          `Filename has to be a checksummed Ethereum address. Got: ${addressFromFileName}`
-        );
+      const parsedAddress =
+        checksummedEthAddress.safeParse(addressFromFileName);
+
+      if (!parsedAddress.success) {
+        throw new Error(parsedAddress.error.message);
       }
 
       const rawFile = readFileSync(
@@ -40,13 +40,8 @@ const exclusiveRelayerConfigs = readdirSync(projectRoot + "/configs").map(
       );
       const parsedConfig = exclusiveRelayerConfigSchema.parse(rawFile);
 
-      if (parsedConfig.address !== addressFromFileName) {
-        throw new Error(
-          `Address in filename (${addressFromFileName}) does not match address in config (${parsedConfig.address}).`
-        );
-      }
-
-      return parsedConfig;
+      // use the address from filename
+      return { ...parsedConfig, address: parsedAddress.data };
     } catch (e) {
       console.error(`Error parsing ${filename}: ${e.message}`);
       process.exit(1);
