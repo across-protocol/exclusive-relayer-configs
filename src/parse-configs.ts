@@ -59,6 +59,9 @@ if (shouldMergeAndWrite) {
       );
       process.exit(1);
     }
+    // remove redundant address
+    delete config.address;
+
     acc[address] = config;
     return acc;
   }, {} as Record<string, z.infer<typeof exclusiveRelayerConfigSchema>>);
