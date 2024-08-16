@@ -10,6 +10,10 @@ const exclusiveRelayerConfigSchema = z.preprocess(
   parseJsonPreprocessor,
   z.object({
     address: checksummedEthAddress,
+    minExclusivePeriod: z.number(), // (seconds) eg. 10
+    minProfitThreshold: z.number(), // eg. 0.0001
+    balanceMultiplier: z.number(), // eg. 0.2
+    maxFillSize: z.number(), // eg. 10_000
   })
 );
 
