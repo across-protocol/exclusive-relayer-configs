@@ -13,7 +13,7 @@ Example:
 ```json
 // 0x123abc123abc.json
 {
-  "minExclusivePeriod": 12, // number (seconds)
+  "minExclusivityPeriod": 12, // number (seconds)
   "minProfitThreshold": 0.0001, // number
   "balanceMultiplier": 0.2, // number
   "maxFillSize": 12000 // number
