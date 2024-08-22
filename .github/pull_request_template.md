@@ -4,14 +4,14 @@ This PR adds a new configuration file inside the `/configs` directory for the re
 
 ## 👤 Operator Information
 
-Please provide the following details before submitting your PR:
+You may provide the following details before submitting your PR. Alternatively, you can reach out to the Across team via private channels.
 
-- **Operator Name**:
-- **Description**:
-- **Contact Information**:
+- **Operator Name** (optional):
+- **Description** (optional):
+- **Contact Information** (optional):
 
 ## 🧪 Verification Checklist
 
 - [ ] I have added my configuration file in the `/configs` directory.
 - [ ] I have ensured no other files have been modified.
-- [ ] I have successfully run the validation script: `yarn validate-configs`
+- [ ] I have successfully run the validation script: `yarn validate-configs` (Optional - this check also runs as a job in CI)
