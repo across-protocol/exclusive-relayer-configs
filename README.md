@@ -9,14 +9,14 @@ This public repository hosts configuration files for relayer exclusivity within 
 
 ## Installation
 
-1. clone the repo
+1 Clone the repo
 
 ```bash
 git clone https://github.com/your-username/exclusive-relayer-config.git
 cd exclusive-relayer-config
 ```
 
-2. install packages
+2 Install packages
 
 ```bash
 yarn install
