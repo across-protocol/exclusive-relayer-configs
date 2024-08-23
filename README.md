@@ -36,10 +36,10 @@ The file must be named in the following format:
 
 Each config file must include the following fields:
 
-- `minExclusivityPeriod`: The minimum time (in seconds) that a relayer should remain exclusive before other relayers are allowed to fill.
+- `minExclusivityPeriod`: The minimum time (in seconds) that a relayer will have exclusive fill rights on a deposit.
 - `minProfitThreshold`: The minimum profit margin required for a relayer to be eligible for exclusivity.
-- `balanceMultiplier`: A factor applied to the relayer's balance, which is used to compute their prioritization during the selection process.
-- `maxFillSize`: The maximum size of the bridge fill that the relayer can handle.
+- `balanceMultiplier`: Scaling factor to apply to the relayer's balance before determinig whether it has sufficient funds to make a fill..
+- `maxFillSize`: The maximum USD value of a fill that the relayer requests exclusivity for.
 
 Example:
 
