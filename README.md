@@ -46,10 +46,10 @@ Example:
 ```json
 // 0x123abc123abc.json
 {
-  "minExclusivityPeriod": 12,
-  "minProfitThreshold": 0.0001,
-  "balanceMultiplier": 0.2,
-  "maxFillSize": 12000
+  "minExclusivityPeriod": 5,
+  "minProfitThreshold": 0.00005,
+  "balanceMultiplier": 0.25,
+  "maxFillSize": 2500
 }
 ```
 
