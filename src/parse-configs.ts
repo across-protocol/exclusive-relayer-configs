@@ -13,13 +13,15 @@ const exclusiveRelayerConfigSchema = z.preprocess(
     minProfitThreshold: z.number(), // eg. 0.0001
     balanceMultiplier: z.number(), // eg. 0.2
     maxFillSize: z.number(), // eg. 10_000
+    originChainIds: z.array(z.number()), // [1, 10, 137, 324 ...]
   })
 );
 
 const shouldMergeAndWrite = process.argv.includes("--merge");
 
-const exclusiveRelayerConfigs = readdirSync(projectRoot + "/configs").map(
-  (filename) => {
+const exclusiveRelayerConfigs = readdirSync(projectRoot + "/configs")
+  .filter((filename) => filename.endsWith(".json"))
+  .map((filename) => {
     try {
       const [addressFromFileName, ext] = filename.split(".");
 
