@@ -13,7 +13,7 @@ const exclusiveRelayerConfigSchema = z.preprocess(
     minProfitThreshold: z.number(), // eg. 0.0001
     balanceMultiplier: z.number(), // eg. 0.2
     maxFillSize: z.number(), // eg. 10_000
-    originChainIds: z.array(z.number), // [1, 10, 137, 324 ...]
+    originChainIds: z.array(z.number()), // [1, 10, 137, 324 ...]
   })
 );
 
