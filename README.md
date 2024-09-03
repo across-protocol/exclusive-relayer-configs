@@ -40,6 +40,7 @@ Each config file must include the following fields:
 - `minProfitThreshold`: The minimum profit margin required for a relayer to be eligible for exclusivity.
 - `balanceMultiplier`: Scaling factor to apply to the relayer's balance before determinig whether it has sufficient funds to make a fill..
 - `maxFillSize`: The maximum USD value of a fill that the relayer requests exclusivity for.
+- `originChainIds`: The set of origin chains where the relayer wishes to be considered for exclusivity.
 
 Example:
 
@@ -49,7 +50,8 @@ Example:
   "minExclusivityPeriod": 5,
   "minProfitThreshold": 0.00005,
   "balanceMultiplier": 0.25,
-  "maxFillSize": 2500
+  "maxFillSize": 2500,
+  "originChainIds": [1, 10, 137, 324, 690, 1135, 8453, 34443, 42161, 59144, 81457, 534352, 7777777]
 }
 ```
 
