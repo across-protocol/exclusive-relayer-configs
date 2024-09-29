@@ -125,8 +125,8 @@
   "0xCad97616f91872C02BA3553dB315Db4015cBE850": {
     "minExclusivityPeriod": 3,
     "minProfitThreshold": 0.00005,
-    "balanceMultiplier": 0.2,
-    "maxFillSize": 2500,
+    "balanceMultiplier": 0.5,
+    "maxFillSize": 10000,
     "originChainIds": [
       42161,
       1,
