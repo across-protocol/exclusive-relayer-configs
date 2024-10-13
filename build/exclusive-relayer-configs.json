@@ -154,6 +154,17 @@
       534352
     ]
   },
+  "0xCe0cE4c9695622f43a9DA29e36794A3B5a33A723": {
+    "minExclusivityPeriod": 8,
+    "minProfitThreshold": 0.00005,
+    "balanceMultiplier": 0.9,
+    "maxFillSize": 15000,
+    "originChainIds": [
+      1,
+      10,
+      8453
+    ]
+  },
   "0xD45BdA83d11Fda3EdA0107ce9Aa8856b753Fc44e": {
     "minExclusivityPeriod": 3,
     "minProfitThreshold": 0.00005,
