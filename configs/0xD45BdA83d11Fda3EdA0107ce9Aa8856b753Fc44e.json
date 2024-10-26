@@ -1,7 +1,7 @@
 {
   "minExclusivityPeriod": 3,
   "minProfitThreshold": 0.00005,
-  "balanceMultiplier": 0.2,
+  "balanceMultiplier": 0.96,
   "maxFillSize": 2500,
   "originChainIds": [1,10,324,8453,34443,42161,59144,81457,534352]
 }
