@@ -27,6 +27,23 @@
       42161
     ]
   },
+  "0x1b59718eaFA2BFFE5318E07c1C3cB2edde354f9C": {
+    "minExclusivityPeriod": 3,
+    "minProfitThreshold": 0.00005,
+    "balanceMultiplier": 0.75,
+    "maxFillSize": 50000,
+    "originChainIds": [
+      1,
+      10,
+      137,
+      324,
+      8453,
+      34443,
+      42161,
+      59144,
+      81457
+    ]
+  },
   "0x2156BfA195C033CA2DF4Ff14e6Da0c617B8cb4F7": {
     "minExclusivityPeriod": 4,
     "minProfitThreshold": 0.00005,
@@ -57,7 +74,7 @@
   "0x41ee28EE05341E7fdDdc8d433BA66054Cd302cA1": {
     "minExclusivityPeriod": 3,
     "minProfitThreshold": 0.00005,
-    "balanceMultiplier": 0.4,
+    "balanceMultiplier": 0.5,
     "maxFillSize": 25000,
     "originChainIds": [
       1,
@@ -67,8 +84,8 @@
       8453,
       34443,
       42161,
-      81457,
-      534352
+      59144,
+      81457
     ]
   },
   "0x4AE5Ee9ADEF696175D0b68019433D8c475E1D2F6": {
