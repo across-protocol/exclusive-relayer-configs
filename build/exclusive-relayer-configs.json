@@ -1,4 +1,20 @@
 {
+  "0x147B12C06D9e8e3837280F783Fd8070848D4412e": {
+    "minExclusivityPeriod": 5,
+    "minProfitThreshold": 0.00005,
+    "balanceMultiplier": 0.75,
+    "maxFillSize": 30000,
+    "originChainIds": [
+      10,
+      137,
+      324,
+      8453,
+      34443,
+      42161,
+      59144,
+      81457
+    ]
+  },
   "0x15652636f3898F550b257B89926d5566821c32E1": {
     "minExclusivityPeriod": 3,
     "minProfitThreshold": 0.00005,
