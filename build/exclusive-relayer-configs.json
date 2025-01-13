@@ -39,7 +39,6 @@
     "maxFillSize": 150000,
     "originChainIds": [
       1,
-      10,
       8453,
       42161,
       81457
@@ -197,10 +196,9 @@
   "0xCad97616f91872C02BA3553dB315Db4015cBE850": {
     "minExclusivityPeriod": 2,
     "minProfitThreshold": 0.00005,
-    "balanceMultiplier": 0.95,
-    "maxFillSize": 75555,
+    "balanceMultiplier": 0.7,
+    "maxFillSize": 35555,
     "originChainIds": [
-      1,
       10,
       324,
       480,
@@ -209,7 +207,8 @@
       34443,
       42161,
       534352,
-      59144
+      59144,
+      57073
     ]
   },
   "0xCe0cE4c9695622f43a9DA29e36794A3B5a33A723": {
