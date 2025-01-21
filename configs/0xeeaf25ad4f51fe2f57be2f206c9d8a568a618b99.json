@@ -3,5 +3,5 @@
     "minProfitThreshold": 0.00005,
     "balanceMultiplier": 0.5,
     "maxFillSize": 15000,
-    "originChainIds": [1]
-  }
+    "originChainIds": [10, 324, 480, 8453, 42161, 81457, 59144, 534352]
+}
