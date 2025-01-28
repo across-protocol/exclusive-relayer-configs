@@ -91,8 +91,8 @@
   "0x41ee28EE05341E7fdDdc8d433BA66054Cd302cA1": {
     "minExclusivityPeriod": 3,
     "minProfitThreshold": 0.00005,
-    "balanceMultiplier": 0.5,
-    "maxFillSize": 25000,
+    "balanceMultiplier": 0.6,
+    "maxFillSize": 50000,
     "originChainIds": [
       1,
       10,
