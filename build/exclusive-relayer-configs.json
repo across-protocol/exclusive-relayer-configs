@@ -57,7 +57,6 @@
     "balanceMultiplier": 0.9,
     "maxFillSize": 150000,
     "originChainIds": [
-      1,
       8453,
       42161,
       81457
