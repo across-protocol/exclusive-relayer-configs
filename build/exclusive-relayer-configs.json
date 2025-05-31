@@ -242,5 +242,15 @@
       8453,
       42161
     ]
+  },
+  "0xefF7337B37c8D217d01cb8223fe497ABD75190d5": {
+    "minExclusivityPeriod": 6,
+    "minProfitThreshold": 0.00005,
+    "balanceMultiplier": 0.9,
+    "maxFillSize": 100000,
+    "originChainIds": [
+      8453,
+      130
+    ]
   }
 }
