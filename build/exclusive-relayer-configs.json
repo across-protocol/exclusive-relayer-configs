@@ -217,8 +217,8 @@
   "0xCad97616f91872C02BA3553dB315Db4015cBE850": {
     "minExclusivityPeriod": 2,
     "minProfitThreshold": 0.00005,
-    "balanceMultiplier": 0.7,
-    "maxFillSize": 77500,
+    "balanceMultiplier": 0.85,
+    "maxFillSize": 177500,
     "originChainIds": [
       10,
       324,
@@ -232,7 +232,10 @@
       57073,
       130,
       1868,
-      1
+      1,
+      56,
+      1135,
+      7777777
     ]
   },
   "0xD45BdA83d11Fda3EdA0107ce9Aa8856b753Fc44e": {
