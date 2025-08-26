@@ -38,7 +38,7 @@ Each config file must include the following fields:
 
 - `minExclusivityPeriod`: The minimum time (in seconds) that a relayer will have exclusive fill rights on a deposit.
 - `minProfitThreshold`: The minimum profit margin required for a relayer to be eligible for exclusivity.
-- `balanceMultiplier`: Scaling factor to apply to the relayer's balance before determinig whether it has sufficient funds to make a fill..
+- `balanceMultiplier`: Scaling factor to apply to the relayer's balance before determining whether it has sufficient funds to make a fill.
 - `maxFillSize`: The maximum USD value of a fill that the relayer requests exclusivity for.
 - `originChainIds`: The set of origin chains where the relayer wishes to be considered for exclusivity.
 
