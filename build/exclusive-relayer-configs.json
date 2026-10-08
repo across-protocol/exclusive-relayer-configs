@@ -31,6 +31,7 @@
     "originChainIds": [
       1,
       56,
+      4663,
       8453,
       42161
     ]
@@ -521,7 +522,12 @@
     "balanceMultiplier": 0.95,
     "maxFillSize": 100000,
     "originChainIds": [
-      1
+      1,
+      56,
+      4663,
+      5042,
+      8453,
+      42161
     ]
   },
   "0xc35f166c03199138BB5aa4e327FeE967Ab9bBc67": {
