@@ -31,6 +31,7 @@
     "originChainIds": [
       1,
       56,
+      4663,
       8453,
       42161
     ]
@@ -272,10 +273,10 @@
     ]
   },
   "0x6Cd1b8cFCD2cA2bCdb46A2D96Bd22b92e16Ba427": {
-    "minExclusivityPeriod": 3,
+    "minExclusivityPeriod": 2,
     "minProfitThreshold": 0.0001,
-    "balanceMultiplier": 0.8,
-    "maxFillSize": 20000,
+    "balanceMultiplier": 0.9,
+    "maxFillSize": 30000,
     "originChainIds": [
       1,
       10,
@@ -521,7 +522,12 @@
     "balanceMultiplier": 0.95,
     "maxFillSize": 100000,
     "originChainIds": [
-      1
+      1,
+      56,
+      4663,
+      5042,
+      8453,
+      42161
     ]
   },
   "0xc35f166c03199138BB5aa4e327FeE967Ab9bBc67": {
