@@ -229,6 +229,20 @@
       42161
     ]
   },
+  "0x490632638389f5e29BeD11A35B8Cc56726BeA895": {
+    "minExclusivityPeriod": 2,
+    "minProfitThreshold": 0.00005,
+    "balanceMultiplier": 0.9,
+    "maxFillSize": 5000,
+    "originChainIds": [
+      1,
+      10,
+      56,
+      137,
+      8453,
+      42161
+    ]
+  },
   "0x4c030F0De98Ae50288AE9B61E7c99Be508EBb168": {
     "minExclusivityPeriod": 2,
     "minProfitThreshold": 0.00005,
@@ -390,6 +404,17 @@
       534352
     ]
   },
+  "0x98a181DB2b84f19f71aaef18eAfFFF30c8f9E473": {
+    "minExclusivityPeriod": 5,
+    "minProfitThreshold": 0.00005,
+    "balanceMultiplier": 0.5,
+    "maxFillSize": 500,
+    "originChainIds": [
+      1,
+      137,
+      8453
+    ]
+  },
   "0xA36bc6867c9963DE1a5dAaF7882efb5B56899E8c": {
     "minExclusivityPeriod": 2,
     "minProfitThreshold": 0.00004,
@@ -459,6 +484,30 @@
       59144,
       81457,
       534352
+    ]
+  },
+  "0xDDb36428C25F39daF49c8320a3017b685495DD5C": {
+    "minExclusivityPeriod": 3,
+    "minProfitThreshold": 0.00005,
+    "balanceMultiplier": 0.9,
+    "maxFillSize": 400,
+    "originChainIds": [
+      4663,
+      8453
+    ]
+  },
+  "0xE770516627543fAc25760be0b73D2B51CeFc901b": {
+    "minExclusivityPeriod": 10,
+    "minProfitThreshold": 0.0001,
+    "balanceMultiplier": 0.5,
+    "maxFillSize": 1500,
+    "originChainIds": [
+      1,
+      10,
+      56,
+      137,
+      8453,
+      42161
     ]
   },
   "0xEeAF25aD4f51fE2f57Be2F206C9d8A568A618b99": {
@@ -608,6 +657,18 @@
       10,
       56,
       137,
+      8453,
+      42161
+    ]
+  },
+  "0xe58DC537F30B3Abff1803b414c181AA4Fa5Edc41": {
+    "minExclusivityPeriod": 5,
+    "minProfitThreshold": 0.001,
+    "balanceMultiplier": 0.9,
+    "maxFillSize": 500,
+    "originChainIds": [
+      1,
+      10,
       8453,
       42161
     ]
