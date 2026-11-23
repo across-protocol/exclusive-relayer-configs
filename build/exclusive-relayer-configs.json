@@ -479,8 +479,8 @@
     "balanceMultiplier": 0.9,
     "maxFillSize": 400,
     "originChainIds": [
-      4663,
-      8453
+      1,
+      56
     ]
   },
   "0xE770516627543fAc25760be0b73D2B51CeFc901b": {
