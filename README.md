@@ -1,6 +1,9 @@
 # Exclusive Relayer Configuration Repository
 
-This public repository hosts configuration files for relayer exclusivity within the Across protocol. Relayers can add or update config files that define specific parameters and values used to select exclusive relayers for bridge fills.
+> [!IMPORTANT]
+> This repository is no longer accepting new relayer addresses; updates to existing configs are still accepted. Relayers are encouraged to migrate to Across V5 instead: see the [Across V5 Auction API docs](https://auction.api.across.to/docs).
+
+This public repository hosts configuration files for relayer exclusivity within the Across protocol. Relayers can update config files that define specific parameters and values used to select exclusive relayers for bridge fills.
 
 **Project Prerequisites**
 
@@ -22,9 +25,9 @@ cd exclusive-relayer-config
 yarn install
 ```
 
-## Adding a new File
+## Config Files
 
-To add a new relayer configuration, you need to create a file inside the `/configs` directory.
+Each relayer configuration is a file inside the `/configs` directory. New files are no longer accepted.
 
 ## 📝 File Naming
 
